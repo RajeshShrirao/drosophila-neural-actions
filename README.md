@@ -5,9 +5,13 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)](https://pytorch.org/)
 [![Connectome](https://img.shields.io/badge/Dataset-Janelia%20Male%20CNS-brightgreen.svg)](https://www.janelia.org/project-team/flyem/male-cns-connectome)
 [![Decoder Accuracy](https://img.shields.io/badge/100ms%20Lookahead%20Accuracy-97.3%25-success.svg)](#benchmark-results)
+[![Live Simulation](https://img.shields.io/badge/Live%20Simulation-GitHub%20Pages-844D43.svg)](https://rajeshshrirao.github.io/drosophila-neural-actions/)
 [![License](https://img.shields.io/badge/License-GPL--3-blue.svg)](LICENSE.md)
 
 Grounded in the **Janelia Drosophila Male Central Nervous System (CNS) Connectome** (`malecns`), this project demonstrates how population dynamics across the fly's descending command bottleneck can forecast upcoming motor transitions **30ms to 200ms before physical movement begins**.
+
+> 🌐 **Interactive Web Visualizer**: [https://rajeshshrirao.github.io/drosophila-neural-actions/](https://rajeshshrirao.github.io/drosophila-neural-actions/)
+
 
 ---
 
