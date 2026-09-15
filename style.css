@@ -1,0 +1,666 @@
+/* 
+ * Drosophila Neural Action Decoder
+ * Warm Editorial Design System: Ivory, Charcoal, Stone, & Dusty Rose
+ * Neutral-first, Accent-second. Quiet Luxury Scientific Monograph.
+ */
+
+:root {
+  /* Core Canvas & Surfaces */
+  --bg-ivory: #F0EAE3;
+  --bg-surface: #F7F3EE;
+  --bg-elevated: #FFFFFF;
+  --bg-subtle: #EBE4DC;
+  --bg-subtle-translucent: rgba(240, 234, 227, 0.7);
+
+  /* Typography & Ink */
+  --ink-primary: #24211E;
+  --text-charcoal: #48443F;
+  --text-muted: #6C6761;
+  --text-stone: #8C867F;
+
+  /* Structural Borders */
+  --border-stone: #D6C7BD;
+  --border-subtle: #E1D6CB;
+  --border-hairline: rgba(140, 134, 127, 0.25);
+
+  /* Accents (Signals) */
+  --accent-blush-dark: #844D43;
+  --accent-dusty-rose: #9E6D60;
+  --accent-muted-rose: #B2887B;
+  --accent-warm-rose: #C2A193;
+  --accent-warm-taupe: #CAB7AD;
+
+  /* Typography System */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Structural Metrics */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  
+  --shadow-subtle: 0 1px 3px rgba(36, 33, 30, 0.04), 0 4px 12px rgba(36, 33, 30, 0.02);
+  --shadow-card: 0 2px 8px rgba(36, 33, 30, 0.04), 0 8px 24px rgba(36, 33, 30, 0.03);
+  --shadow-elevated: 0 8px 30px rgba(36, 33, 30, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-ivory);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.page-frame {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 32px 36px 64px;
+}
+
+/* -------------------------------------------------------------
+ * EDITORIAL MASTHEAD
+ * ------------------------------------------------------------- */
+.masthead {
+  border-bottom: 1px solid var(--border-stone);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.masthead-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.publication-badge {
+  color: var(--accent-blush-dark);
+  border-bottom: 1px solid var(--accent-warm-rose);
+  padding-bottom: 2px;
+}
+
+.masthead-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.masthead-titles {
+  max-width: 860px;
+}
+
+.monograph-title {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--ink-primary);
+  margin-bottom: 8px;
+}
+
+.monograph-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-charcoal);
+  line-height: 1.55;
+}
+
+.monograph-subtitle em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05em;
+}
+
+.masthead-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.telemetry-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-stone);
+  padding: 5px 12px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-charcoal);
+}
+
+.telemetry-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-blush-dark);
+  animation: gentle-pulse 2.2s infinite ease-in-out;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.masthead-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* -------------------------------------------------------------
+ * BUTTONS (EDITORIAL / TACTILE)
+ * ------------------------------------------------------------- */
+.btn {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+}
+
+.btn-subtle {
+  background: var(--bg-surface);
+  color: var(--ink-primary);
+  border: 1px solid var(--border-stone);
+}
+
+.btn-subtle:hover {
+  background: var(--bg-elevated);
+  border-color: var(--ink-primary);
+}
+
+.btn-editorial {
+  background: var(--accent-blush-dark);
+  color: #FFFFFF;
+}
+
+.btn-editorial:hover {
+  background: #6f3e36;
+}
+
+/* -------------------------------------------------------------
+ * MAIN LAYOUT GRID
+ * ------------------------------------------------------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 430px;
+  gap: 32px;
+}
+
+@media (max-width: 1140px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Plate Cards (Scientific Figures) */
+.plate-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-subtle);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.plate-card:last-child {
+  margin-bottom: 0;
+}
+
+.plate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.plate-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--accent-blush-dark);
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.plate-title {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: var(--ink-primary);
+  letter-spacing: -0.01em;
+}
+
+.plate-annotation {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/* Action Tag */
+.action-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-ivory);
+  border: 1px solid var(--border-stone);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 0.76rem;
+}
+
+.tag-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--text-stone);
+  font-size: 0.68rem;
+}
+
+.tag-value {
+  font-weight: 600;
+  color: var(--accent-blush-dark);
+}
+
+/* Canvas Wrappers */
+.canvas-wrapper {
+  position: relative;
+  background: #FCFAF7;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+#fly-canvas, #raster-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.canvas-indicators {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.indicator-chip {
+  background: rgba(247, 243, 238, 0.92);
+  border: 1px solid var(--border-stone);
+  color: var(--text-charcoal);
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  backdrop-filter: blur(4px);
+}
+
+/* -------------------------------------------------------------
+ * ELECTROPHYSIOLOGY OSCILLOSCOPE
+ * ------------------------------------------------------------- */
+.channel-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  background: var(--bg-ivory);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+}
+
+.legend-swatch {
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+}
+
+/* -------------------------------------------------------------
+ * FORECAST CARD (INTENT DECODER)
+ * ------------------------------------------------------------- */
+.forecast-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--accent-blush-dark);
+  background: rgba(158, 109, 96, 0.12);
+  border: 1px solid var(--accent-warm-rose);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.forecast-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-ivory);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-xs);
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+
+.forecast-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-xs);
+  background: #EBE4DC;
+  border: 1px solid var(--border-stone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.forecast-summary {
+  flex: 1;
+  margin-left: 14px;
+}
+
+.forecast-caption {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  color: var(--text-stone);
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.forecast-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.2;
+}
+
+.forecast-metric {
+  text-align: right;
+}
+
+.metric-number {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-blush-dark);
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.68rem;
+  color: var(--text-stone);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 3px;
+}
+
+/* Distribution Table */
+.distribution-table {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.dist-row {
+  display: flex;
+  align-items: center;
+  font-size: 0.80rem;
+}
+
+.dist-label {
+  width: 140px;
+  color: var(--text-charcoal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.dist-track {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.dist-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--border-stone);
+  border-radius: 999px;
+  transition: width 0.15s ease-out;
+}
+
+.dist-row.active .dist-label {
+  color: var(--accent-blush-dark);
+  font-weight: 700;
+}
+
+.dist-row.active .dist-fill {
+  background: var(--accent-dusty-rose);
+}
+
+.dist-val {
+  width: 44px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------
+ * OPTOGENETIC INTERVENTION
+ * ------------------------------------------------------------- */
+.opto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.opto-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: var(--bg-ivory);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.opto-button:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-stone);
+  transform: translateY(-1px);
+}
+
+.opto-button.active-opto {
+  background: #F4ECE7;
+  border-color: var(--accent-dusty-rose);
+  box-shadow: 0 0 0 1px var(--accent-dusty-rose);
+}
+
+.opto-button-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.opto-pip {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-stone);
+}
+
+.opto-pip-mdn { background: var(--accent-blush-dark); }
+.opto-pip-gf  { background: #A86B32; }
+.opto-pip-dng { background: #557864; }
+.opto-pip-adn { background: var(--accent-dusty-rose); }
+.opto-pip-pip { background: var(--accent-muted-rose); }
+
+.opto-name {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.opto-desc {
+  font-size: 0.70rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.opto-resume-btn {
+  grid-column: span 2;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-charcoal);
+  background: var(--bg-surface);
+}
+
+/* -------------------------------------------------------------
+ * BENCHMARKS & CITATIONS
+ * ------------------------------------------------------------- */
+.benchmarks-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.benchmark-cell {
+  background: var(--bg-ivory);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.cell-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-blush-dark);
+}
+
+.cell-label {
+  display: block;
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.citation-footer p {
+  font-size: 0.74rem;
+  color: var(--text-stone);
+  line-height: 1.45;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 10px;
+}
+
+/* -------------------------------------------------------------
+ * RECORDING MODAL
+ * ------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(36, 33, 30, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-backdrop.hidden {
+  display: none;
+}
+
+.modal-box {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-sm);
+  padding: 28px 32px;
+  width: 420px;
+  text-align: center;
+  box-shadow: var(--shadow-elevated);
+}
+
+.modal-box h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin-bottom: 6px;
+}
+
+.modal-box p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.progress-bar-container {
+  height: 6px;
+  background: var(--bg-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-blush-dark);
+  transition: width 0.1s linear;
+}

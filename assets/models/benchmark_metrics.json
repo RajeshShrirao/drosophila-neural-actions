@@ -1,0 +1,196 @@
+{
+  "accuracies": {
+    "logistic_regression": 0.9723676880222841,
+    "random_forest": 0.9694707520891365,
+    "deep_neural_decoder": 0.9732590529247911
+  },
+  "horizon_results": [
+    {
+      "horizon_ms": 0.0,
+      "accuracy": 0.9825,
+      "lead_time_ratio": 0.0
+    },
+    {
+      "horizon_ms": 30.0,
+      "accuracy": 0.9796,
+      "lead_time_ratio": 0.3
+    },
+    {
+      "horizon_ms": 60.0,
+      "accuracy": 0.9782,
+      "lead_time_ratio": 0.6
+    },
+    {
+      "horizon_ms": 100.0,
+      "accuracy": 0.9699,
+      "lead_time_ratio": 1.0
+    },
+    {
+      "horizon_ms": 150.0,
+      "accuracy": 0.9545,
+      "lead_time_ratio": 1.5
+    },
+    {
+      "horizon_ms": 200.0,
+      "accuracy": 0.9387,
+      "lead_time_ratio": 2.0
+    }
+  ],
+  "neuron_importance": {
+    "DNp09": 0.10827370676177427,
+    "MDN": 0.04557278955272964,
+    "DNg02_L": 0.03038544481570445,
+    "DNg02_R": 0.060016449973699336,
+    "aDN": 0.02401223381773236,
+    "GF": 0.026818409476062042,
+    "pIP10": 0.006819988244811112,
+    "EPG_Compass": 0.010821343620588423,
+    "PEN_Steering": 0.01585911393493123,
+    "MBON_Valence": 0.0047538531353005535
+  },
+  "classification_report": {
+    "Quiescence / Idle": {
+      "precision": 0.9452971271153089,
+      "recall": 0.9812091503267973,
+      "f1-score": 0.9629184205251553,
+      "support": 2448.0
+    },
+    "Forward Walk": {
+      "precision": 0.9891752577319588,
+      "recall": 0.9687026754164564,
+      "f1-score": 0.9788319306299413,
+      "support": 1981.0
+    },
+    "Backward Walk (Moonwalk)": {
+      "precision": 0.9423791821561338,
+      "recall": 0.926873857404022,
+      "f1-score": 0.9345622119815669,
+      "support": 547.0
+    },
+    "Turn Left": {
+      "precision": 0.9886229894076108,
+      "recall": 0.9886229894076108,
+      "f1-score": 0.9886229894076108,
+      "support": 2549.0
+    },
+    "Turn Right": {
+      "precision": 0.9712918660287081,
+      "recall": 0.9902439024390244,
+      "f1-score": 0.9806763285024155,
+      "support": 205.0
+    },
+    "Groom Head/Antennae": {
+      "precision": 0.9933259176863182,
+      "recall": 0.9530416221985059,
+      "f1-score": 0.9727668845315904,
+      "support": 937.0
+    },
+    "Escape Jump": {
+      "precision": 0.7777777777777778,
+      "recall": 0.4666666666666667,
+      "f1-score": 0.5833333333333334,
+      "support": 60.0
+    },
+    "Courtship Wing Flare": {
+      "precision": 0.870722433460076,
+      "recall": 0.9233870967741935,
+      "f1-score": 0.8962818003913894,
+      "support": 248.0
+    },
+    "accuracy": 0.9694707520891365,
+    "macro avg": {
+      "precision": 0.9348240689204865,
+      "recall": 0.8998434950791596,
+      "f1-score": 0.9122492374128754,
+      "support": 8975.0
+    },
+    "weighted avg": {
+      "precision": 0.9695367145356459,
+      "recall": 0.9694707520891365,
+      "f1-score": 0.9690579367825706,
+      "support": 8975.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      2402,
+      5,
+      0,
+      4,
+      3,
+      0,
+      0,
+      34
+    ],
+    [
+      42,
+      1919,
+      10,
+      10,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      26,
+      5,
+      507,
+      0,
+      0,
+      1,
+      8,
+      0
+    ],
+    [
+      12,
+      7,
+      2,
+      2520,
+      3,
+      5,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      203,
+      0,
+      0,
+      0
+    ],
+    [
+      29,
+      0,
+      4,
+      11,
+      0,
+      893,
+      0,
+      0
+    ],
+    [
+      28,
+      4,
+      0,
+      0,
+      0,
+      0,
+      28,
+      0
+    ],
+    [
+      0,
+      0,
+      15,
+      4,
+      0,
+      0,
+      0,
+      229
+    ]
+  ]
+}
