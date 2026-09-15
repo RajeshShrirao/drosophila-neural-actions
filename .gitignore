@@ -5,3 +5,11 @@
 .DS_Store
 docs
 samples/
+linkedin/
+videos/
+*.mp4
+*.webm
+*.webp
+__pycache__/
+*.pyc
+
